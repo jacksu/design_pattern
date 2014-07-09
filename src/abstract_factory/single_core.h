@@ -10,12 +10,6 @@
 #define design_pattern_single_core_h
 #include <iostream>
 
-enum CTYPE
-{
-    COREA,
-    COREB
-};
-
 class SingleCore
 {
 public:
@@ -35,6 +29,5 @@ class SingleCoreB: public SingleCore
 public:
     void Show() { std::cout<<"SingleCore B"<<std::endl; }
 };
-
 
 #endif

@@ -4,17 +4,17 @@ LDFLAGS=
 SRC=$(wildcard *.cpp)
 OBJ=$(patsubst %.cpp,%.o,$(SRC))
 
-OUTPUT=factory_test
+OUTPUT=singleton_test
 
 all:$(OUTPUT)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $< 
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(OUTPUT): $(OBJ)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-.PHONY:all clean
+.PHONY: clean
 
 clean:
 	rm -f $(OBJ) $(OUTPUT)
