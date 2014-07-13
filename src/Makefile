@@ -1,4 +1,4 @@
-DIRS=factory factory_method abstract_factory singleton
+DIRS=factory factory_method abstract_factory singleton builder prototype
 DEST=install clean
 
 all:%:

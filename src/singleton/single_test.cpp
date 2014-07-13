@@ -7,11 +7,22 @@
 //
 
 #include "single_test.h"
+#include "single_template.h"
+
+
+class Test
+{
+public:
+    void Show(){std::cout<<"in Test"<<std::endl;}
+};
+
 
 int main(int argc, char **argv)
 {
     //Singleton *singleton=new Singleton(); //error
     Singleton *singleton=Singleton::GetInstance();
     singleton->Show();
+    Test *test=singleton::Instance<Test>();
+    test->Show();
     return 0;
 }

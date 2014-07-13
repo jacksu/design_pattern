@@ -9,14 +9,19 @@
 #ifndef design_pattern_singleton_h
 #define design_pattern_singleton_h
 
-//单例基本实现，但线程不安全
+/**
+ *  单例基本实现，但线程不安全
+ *  程序结束的时候，需释放内存
+ */
 class Singleton
 {
 public:
     static Singleton* GetInstance();
     void Show(){std::cout<<"in singleton"<<std::endl;}
 protected:
-    //设置为protected，防止误用调用构造函数生成singleton对象
+    /**
+     *  设置为protected，防止误用调用构造函数生成singleton对象
+     */
     Singleton() {}
 private:
     //禁止用户使用拷贝构造函数和赋值操作符
