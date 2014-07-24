@@ -10,5 +10,6 @@
 #define __design_pattern__command_test__
 
 #include <iostream>
+#include "command.h"
 
 #endif /* defined(__design_pattern__command_test__) */

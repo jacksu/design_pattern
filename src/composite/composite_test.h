@@ -10,5 +10,6 @@
 #define __design_pattern__composite_test__
 
 #include <iostream>
+#include "company.h"
 
 #endif /* defined(__design_pattern__composite_test__) */

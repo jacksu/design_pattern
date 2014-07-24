@@ -7,3 +7,18 @@
 //
 
 #include "flyweight_test.h"
+
+int main(int argv, char** argc)
+{
+    std::string black_name("中国");
+    std::string white_name("美国");
+    PieceBoard *board=new PieceBoard(black_name,white_name);
+    board->SetPiece(BLACK,PiecePos(1,1));
+    board->SetPiece(BLACK,PiecePos(1,2));
+    board->SetPiece(WHITE,PiecePos(1,3));
+    board->SetPiece(WHITE,PiecePos(1,4));
+    board->Draw(black_name);
+    board->Draw(white_name);
+    delete board;
+    return 0;
+}

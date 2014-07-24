@@ -10,5 +10,7 @@
 #define __design_pattern__flyweight_test__
 
 #include <iostream>
+#include "piece.h"
+#include "piece_board.h"
 
 #endif /* defined(__design_pattern__flyweight_test__) */

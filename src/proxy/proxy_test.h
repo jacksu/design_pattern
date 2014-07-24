@@ -10,5 +10,6 @@
 #define __design_pattern__proxy_test__
 
 #include <iostream>
+#include "image.h"
 
 #endif /* defined(__design_pattern__proxy_test__) */

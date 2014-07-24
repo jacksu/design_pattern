@@ -10,5 +10,6 @@
 #define __design_pattern__decorator_test__
 
 #include <iostream>
-
+#include "phone.h"
+#include "decorator_phone.h"
 #endif /* defined(__design_pattern__decorator_test__) */

@@ -7,3 +7,11 @@
 //
 
 #include "facade_test.h"
+
+int main(int argv, char** argc)
+{
+    Compiler *compiler=new Compiler();
+    compiler->Run();
+    delete compiler;
+    return 0;
+}

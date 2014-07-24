@@ -7,3 +7,14 @@
 //
 
 #include "adapter_test.h"
+
+int main(int argv, char** argc)
+{
+    Sequence *stack=new Stack();
+    Sequence *queue=new Queue();
+    stack->push(1);
+    stack->pop();
+    queue->push(1);
+    queue->pop();
+    return 0;
+}

@@ -1,34 +1,20 @@
+# 需要排除的目录
+exclude_dirs := include bin
+# 取得当前子目录深度为1的所有目录名称
 
-function get_dir() \
-{ \
-	ALL_DIR="" \
-	for DIR in `ls -a $1` \
+DIRS := $(shell find . -maxdepth 1 -type d)
+DIRS := $(basename $(patsubst ./%,%,$(DIRS)))
+DIRS := $(filter-out $(exclude_dirs),$(DIRS))
+
+.PHONY: release clean
+
+release: 
+	@for x in $(DIRS); \
 	do \
-		if [ x"$(DIR)" != x"." -a -x"$(DIR)" != -x".." ] \
-		then \
-			if [ -d "$1/$(DIR)" ] \
-			then \
-				ALL_DIR += $(DIR) \
-			fi \
-		fi \
-	done \
-	echo $(ALL_DIR); \
-}
-
-#DIRS=factory factory_method abstract_factory singleton builder prototype
-DIRS=`get_dir ./`
-DEST=install clean
-
-all:%:
-	for x in $(DIRS); \
-	do \
-		make -C $$x $@; \
-		if [ $$? != 0 ]; then \
-			exit 1; \
-		fi \
+		make -C $$x; \
 	done
 
-$(DEST):%:
+clean:
 	@for x in $(DIRS); \
 	do \
 		make -C $$x $@; \

@@ -10,5 +10,6 @@
 #define __design_pattern__adapter_test__
 
 #include <iostream>
+#include "sequence.h"
 
 #endif /* defined(__design_pattern__adapter_test__) */

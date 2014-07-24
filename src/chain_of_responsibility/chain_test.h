@@ -10,5 +10,6 @@
 #define __design_pattern__chain_test__
 
 #include <iostream>
+#include "manager_chain.h"
 
 #endif /* defined(__design_pattern__chain_test__) */

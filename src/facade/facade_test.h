@@ -10,5 +10,6 @@
 #define __design_pattern__facade_test__
 
 #include <iostream>
+#include "compiler.h"
 
 #endif /* defined(__design_pattern__facade_test__) */

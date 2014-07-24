@@ -7,3 +7,20 @@
 //
 
 #include "chain_test.h"
+
+int main(int argc, char **argv)
+{
+    Manager *common=new CommonManager("A");
+    Manager *major=new Majordomo("B");
+    Manager *general=new GeneralManager("C");
+    common->AddHandler(major);
+    common->AddHandler(general);
+    common->HandleRequest("request", 100);
+    common->HandleRequest("request", 600);
+    common->HandleRequest("request", 1000);
+    common->HandleRequest("request", 10000);
+    delete general;
+    delete major;
+    delete common;
+    return 0;
+}
